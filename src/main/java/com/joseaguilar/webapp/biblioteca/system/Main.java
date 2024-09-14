@@ -12,6 +12,7 @@ import com.joseaguilar.webapp.biblioteca.controller.FXController.ClienteFXContro
 import com.joseaguilar.webapp.biblioteca.controller.FXController.EmpleadoFXController;
 import com.joseaguilar.webapp.biblioteca.controller.FXController.IndexController;
 import com.joseaguilar.webapp.biblioteca.controller.FXController.LibroFXController;
+import com.joseaguilar.webapp.biblioteca.controller.FXController.PrestamoFXController;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -35,7 +36,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
        this.stage = primaryStage;
-       stage.setTitle("Biblioteca Kinal Spring");
+       stage.setTitle("Biblioteca Pro");
        indexView();
        stage.show();
     }
@@ -59,7 +60,7 @@ public class Main extends Application {
  
     public void indexView(){
         try {
-            IndexController indexView = (IndexController)switchScene("index.fxml", 1000, 650);
+            IndexController indexView = (IndexController)switchScene("index.fxml", 650, 500);
             indexView.setStage(this);
         } catch (Exception e) {
             e.printStackTrace();
@@ -68,7 +69,7 @@ public class Main extends Application {
 
     public void CategoriaView(){
         try {
-            CategoriaFXController categoriaView = (CategoriaFXController)switchScene("CategoriaView.fxml", 1000, 650);
+            CategoriaFXController categoriaView = (CategoriaFXController)switchScene("CategoriaView.fxml", 1200, 800);
             categoriaView.setStage(this);
         } catch (Exception e) {
             e.printStackTrace();
@@ -77,7 +78,7 @@ public class Main extends Application {
 
     public void ClienteView(){
         try {
-            ClienteFXController clienteView = (ClienteFXController)switchScene("ClienteView.fxml", 1400, 750);
+            ClienteFXController clienteView = (ClienteFXController)switchScene("ClienteView.fxml", 1200, 800);
             clienteView.setStage(this);
         } catch (Exception e) {
             e.printStackTrace();
@@ -86,7 +87,7 @@ public class Main extends Application {
 
     public void LibroView(){
         try {
-            LibroFXController libroView = (LibroFXController)switchScene("LibroView.fxml", 1400,750);
+            LibroFXController libroView = (LibroFXController)switchScene("LibroView.fxml", 1200,800);
             libroView.setStage(this);
         } catch (Exception e) {
             e.printStackTrace();
@@ -95,8 +96,17 @@ public class Main extends Application {
 
     public void EmpleadoView(){
         try {
-            EmpleadoFXController empleadoView = (EmpleadoFXController)switchScene("EmpleadoView.fxml", 1400,750);
+            EmpleadoFXController empleadoView = (EmpleadoFXController)switchScene("EmpleadoView.fxml", 1200,800);
             empleadoView.setStage(this );
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void PrestamoView(){
+        try {
+            PrestamoFXController prestamoView = (PrestamoFXController)switchScene("PrestamoView.fxml", 1200,800);
+            prestamoView.setStage(this );
         } catch (Exception e) {
             e.printStackTrace();
         }

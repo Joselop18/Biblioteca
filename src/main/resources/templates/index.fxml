@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joseaguilar.webapp.biblioteca.controller.FXController.IndexController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="650.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/FondoPrincipal.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="238.0" layoutY="2.0" prefHeight="25.0" prefWidth="175.0" style="-fx-background-color: #edf7b5;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem fx:id="btnCategorias" mnemonicParsing="false" onAction="#handleButtonAction" text="Categorias" />
+                  <MenuItem fx:id="btnClientes" mnemonicParsing="false" onAction="#handleButtonAction" text="Clientes" />
+                  <MenuItem fx:id="btnEmpleados" mnemonicParsing="false" onAction="#handleButtonAction" text="Empleados" />
+                  <MenuItem fx:id="btnLibros" mnemonicParsing="false" onAction="#handleButtonAction" text="Libros" />
+                  <MenuItem fx:id="btnPrestamos" mnemonicParsing="false" onAction="#handleButtonAction" text="Prestamos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <input>
+                  <InnerShadow />
+               </input>
+            </DropShadow>
+         </effect>
+      </MenuBar>
+   </children>
+</AnchorPane>

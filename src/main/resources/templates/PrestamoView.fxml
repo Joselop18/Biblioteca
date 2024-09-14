@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joseaguilar.webapp.biblioteca.controller.FXController.PrestamoFXController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/MenuPrestamos.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfId" editable="false" layoutX="50.0" layoutY="228.0" prefHeight="40.0" prefWidth="115.0" promptText="Id" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <ComboBox fx:id="cmbEmpleado" layoutX="27.0" layoutY="360.0" prefHeight="40.0" prefWidth="222.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <ComboBox fx:id="cmbCliente" layoutX="27.0" layoutY="474.0" prefHeight="40.0" prefWidth="222.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <ComboBox fx:id="cmbLibro1" layoutX="34.0" layoutY="582.0" prefHeight="40.0" prefWidth="222.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <ComboBox fx:id="cmbLibro2" disable="true" layoutX="34.0" layoutY="637.0" prefHeight="40.0" prefWidth="222.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <ComboBox fx:id="cmbLibro3" disable="true" layoutX="34.0" layoutY="694.0" prefHeight="40.0" prefWidth="222.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <DatePicker fx:id="dpPrestamo" layoutX="229.0" layoutY="239.0" prefHeight="34.0" prefWidth="214.0" />
+      <DatePicker fx:id="dpDevolucion" layoutX="583.0" layoutY="232.0" prefHeight="34.0" prefWidth="230.0" />
+      <TextField fx:id="tfVigencia" layoutX="958.0" layoutY="216.0" prefHeight="40.0" prefWidth="174.0" promptText="Vigencia" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <TableView fx:id="tblPrestamos" layoutX="276.0" layoutY="362.0" onMouseClicked="#cargarForm" prefHeight="400.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="53.60003662109375" text="Id" />
+            <TableColumn fx:id="colCliente" prefWidth="128.79998779296875" text="Cliente" />
+            <TableColumn fx:id="colEmpleado" prefWidth="139.20001220703125" text="Empleado" />
+            <TableColumn fx:id="colLibros" prefWidth="258.39996337890625" text="Libros" />
+            <TableColumn fx:id="colFechaPrestamo" prefWidth="111.2000732421875" text="Fecha de Prestamo" />
+            <TableColumn fx:id="colFechaDevolucion" prefWidth="123.2000732421875" text="Fecha de Devolucion" />
+            <TableColumn fx:id="colVigencia" prefWidth="84.7999267578125" text="Vigencia" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnRegresar" alignment="CENTER" layoutX="969.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="174.0" style="-fx-background-color: #890e0e; -fx-background-radius: 20;" text="Regresar">
+         <effect>
+            <DropShadow>
+               <input>
+                  <InnerShadow>
+                     <input>
+                        <Bloom />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Book Antiqua Bold" size="21.0" />
+         </font></Button>
+      <Button fx:id="btnVaciar" alignment="CENTER" layoutX="285.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="120.0" style="-fx-background-radius: 20; -fx-background-color: #ce976f;" text="Vaciar" textFill="WHITE">
+         <font>
+            <Font name="Forte" size="23.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <InnerShadow>
+                     <input>
+                        <Bloom threshold="0.76" />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnGuardar" alignment="CENTER" layoutX="432.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="120.0" style="-fx-background-radius: 20; -fx-background-color: #ce976f;" text="Guardar" textFill="WHITE">
+         <font>
+            <Font name="Forte" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Bloom threshold="0.84">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </Bloom>
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" alignment="CENTER" layoutX="578.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="120.0" style="-fx-background-radius: 20; -fx-background-color: #ce976f;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Forte" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Bloom threshold="0.79">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </Bloom>
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnAgregar" alignment="CENTER" layoutX="78.0" layoutY="738.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="120.0" style="-fx-background-radius: 20; -fx-background-color: #ce976f;" text="Agregar Libro" textFill="WHITE">
+         <font>
+            <Font name="Forte" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <input>
+                  <Bloom threshold="0.79">
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </Bloom>
+               </input>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <TextField fx:id="tfBuscar" layoutX="849.0" layoutY="313.0" prefHeight="26.0" prefWidth="230.0" promptText="Ingrese el Id del libro a Buscar" />
+      <Button fx:id="btnBuscar" layoutX="1107.0" layoutY="311.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="30.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Lupa.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

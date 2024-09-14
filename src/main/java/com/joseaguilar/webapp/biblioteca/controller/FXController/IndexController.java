@@ -38,7 +38,7 @@ public class IndexController implements Initializable{
         }else if(event.getSource() == btnLibros){
             stage.LibroView();
         }else if(event.getSource() == btnPrestamos){
-            
+            stage.PrestamoView();
         }
     }
 }

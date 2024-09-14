@@ -141,7 +141,6 @@ public class LibroFXController implements Initializable{
         tfNumEs.clear();
         taSinopsis.clear();
         cmbCategoria.getSelectionModel().clearSelection();
-
     }
 
     public void agregarLibro() {

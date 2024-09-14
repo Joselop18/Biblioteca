@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.joseaguilar.webapp.biblioteca.controller.FXController.ClienteFXController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/MenuClientes.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfId" layoutX="14.0" layoutY="273.0" prefHeight="40.0" prefWidth="135.0" promptText="DPI" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <TextField fx:id="tfNombre" layoutX="235.0" layoutY="273.0" prefHeight="40.0" prefWidth="246.0" promptText="Nombre" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <TextField fx:id="tfApellido" layoutX="543.0" layoutY="273.0" prefHeight="40.0" prefWidth="273.0" promptText="Apellido" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <TextField fx:id="tfTelefono" layoutX="885.0" layoutY="273.0" prefHeight="40.0" prefWidth="273.0" promptText="Telefono" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <Button fx:id="btnGuardar" alignment="CENTER" layoutX="59.0" layoutY="393.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="171.0" style="-fx-background-radius: 20; -fx-background-color: #ce976f;" text="Guardar" textFill="WHITE">
+         <font>
+            <Font name="Californian FB" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <InnerShadow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnVaciar" alignment="CENTER" layoutX="55.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="180.0" style="-fx-background-radius: 20; -fx-background-color: #ce976f;" text="Vaciar" textFill="WHITE">
+         <font>
+            <Font name="Californian FB Bold" size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" alignment="CENTER" layoutX="55.0" layoutY="573.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="180.0" style="-fx-background-radius: 20; -fx-background-color: #ce976f;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Californian FB Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <InnerShadow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <TableView fx:id="tblClientes" layoutX="351.0" layoutY="383.0" onMouseClicked="#cargarForm" prefHeight="400.0" prefWidth="800.0">
+         <columns>
+            <TableColumn fx:id="colId" minWidth="0.0" prefWidth="200.0" text="DPI" />
+            <TableColumn fx:id="colNombre" prefWidth="200.0" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="200.0" text="Apellido" />
+            <TableColumn fx:id="colTelefono" prefWidth="200.0" text="Telefono" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnRegresar" alignment="CENTER" layoutX="948.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="171.0" style="-fx-background-color: #9d1a1a; -fx-background-radius: 20;" text="Regresar" textFill="#1b1010">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="23.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect></Button>
+      <TextField fx:id="tfBuscar" layoutX="862.0" layoutY="345.0" prefHeight="26.0" prefWidth="230.0" promptText="Ingrese el DPI del cliente a Buscar" />
+      <Button fx:id="btnBuscar" layoutX="1104.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="30.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Lupa.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

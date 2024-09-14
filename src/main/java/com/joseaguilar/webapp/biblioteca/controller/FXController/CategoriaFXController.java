@@ -24,6 +24,7 @@ import lombok.Setter;
 
 @Component
 public class CategoriaFXController implements Initializable{
+
     @FXML
     TextField tfId, tfNombre, tfBuscar;
 
